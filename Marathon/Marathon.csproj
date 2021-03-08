@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AB647DB6-3EE4-4B4C-BDC1-8148367A6F64}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Marathon</RootNamespace>
+    <AssemblyName>Marathon</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutMarathon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutMarathon.Designer.cs">
+      <DependentUpon>AboutMarathon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMenu.Designer.cs">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BMICalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BMICalculator.Designer.cs">
+      <DependentUpon>BMICalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmReg.Designer.cs">
+      <DependentUpon>ConfirmReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CoordinatorMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CoordinatorMenu.Designer.cs">
+      <DependentUpon>CoordinatorMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetForCountryComboBox.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetForCountryComboBox.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetForGenderComboBox.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetForGenderComboBox.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBConnection.cs" />
+    <Compile Include="HowLongMarathon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HowLongMarathon.Designer.cs">
+      <DependentUpon>HowLongMarathon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarathonMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarathonMap.Designer.cs">
+      <DependentUpon>MarathonMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarathonSkills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarathonSkills.Designer.cs">
+      <DependentUpon>MarathonSkills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyRecords.Designer.cs">
+      <DependentUpon>MyRecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrewievCertificate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrewievCertificate.Designer.cs">
+      <DependentUpon>PrewievCertificate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RegForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegForm.Designer.cs">
+      <DependentUpon>RegForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationOnMarathon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrationOnMarathon.Designer.cs">
+      <DependentUpon>RegistrationOnMarathon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegOrLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegOrLoginForm.Designer.cs">
+      <DependentUpon>RegOrLoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RunnerControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RunnerControl.Designer.cs">
+      <DependentUpon>RunnerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RunnerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RunnerMenu.Designer.cs">
+      <DependentUpon>RunnerMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RunnersInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RunnersInfo.Designer.cs">
+      <DependentUpon>RunnersInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SponsorARunner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SponsorARunner.Designer.cs">
+      <DependentUpon>SponsorARunner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Time.cs" />
+    <EmbeddedResource Include="AboutMarathon.resx">
+      <DependentUpon>AboutMarathon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminMenu.resx">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BMICalculator.resx">
+      <DependentUpon>BMICalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmReg.resx">
+      <DependentUpon>ConfirmReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CoordinatorMenu.resx">
+      <DependentUpon>CoordinatorMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HowLongMarathon.resx">
+      <DependentUpon>HowLongMarathon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarathonMap.resx">
+      <DependentUpon>MarathonMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarathonSkills.resx">
+      <DependentUpon>MarathonSkills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyRecords.resx">
+      <DependentUpon>MyRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrewievCertificate.resx">
+      <DependentUpon>PrewievCertificate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegForm.resx">
+      <DependentUpon>RegForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrationOnMarathon.resx">
+      <DependentUpon>RegistrationOnMarathon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegOrLoginForm.resx">
+      <DependentUpon>RegOrLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RunnerControl.resx">
+      <DependentUpon>RunnerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RunnerMenu.resx">
+      <DependentUpon>RunnerMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RunnersInfo.resx">
+      <DependentUpon>RunnersInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SponsorARunner.resx">
+      <DependentUpon>SponsorARunner.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSetForCountryComboBox.xsc">
+      <DependentUpon>DataSetForCountryComboBox.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetForCountryComboBox.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetForCountryComboBox.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetForCountryComboBox.xss">
+      <DependentUpon>DataSetForCountryComboBox.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetForGenderComboBox.xsc">
+      <DependentUpon>DataSetForGenderComboBox.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetForGenderComboBox.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetForGenderComboBox.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetForGenderComboBox.xss">
+      <DependentUpon>DataSetForGenderComboBox.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\airbus-a380.jpg" />
+    <None Include="Resources\banco-banespa.jpg" />
+    <None Include="Resources\bus.jpg" />
+    <None Include="Resources\capybara.jpg" />
+    <None Include="Resources\f1-car.jpg" />
+    <None Include="Resources\football-field.jpg" />
+    <None Include="Resources\horse.png" />
+    <None Include="Resources\ibirapuera-park-lake.jpg" />
+    <None Include="Resources\jaguar.jpg" />
+    <None Include="Resources\marathon-image.jpg" />
+    <None Include="Resources\marathon-skills-2016-marathon-map.jpg" />
+    <None Include="Resources\pair-of-havaianas.jpg" />
+    <None Include="Resources\ronaldinho.jpg" />
+    <None Include="Resources\sloth.jpg" />
+    <None Include="Resources\slug.jpg" />
+    <None Include="Resources\teatro-municipal.jpg" />
+    <None Include="Resources\worm.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\male-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\female-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timthumb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bmi-healthy-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bmi-underweight-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bmi-obese-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bmi-overweight-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1-ChechPoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2-ChechPoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3-ChechPoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4-ChechPoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5-ChechPoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6-ChechPoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map-icon-drinks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map-icon-energy-bars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map-icon-information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map-icon-medical.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map-icon-start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map-icon-toilets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f1-car.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\slug.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\worm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marathon-skills-2014-certificate-seal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marathon-skills-2014-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross-icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
